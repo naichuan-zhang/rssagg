@@ -1,0 +1,5 @@
+### /healthz
+GET http://localhost:8080/v1/healthz
+
+### /err
+GET http://localhost:8080/v1/err
