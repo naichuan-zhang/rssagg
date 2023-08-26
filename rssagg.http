@@ -3,3 +3,43 @@ GET http://localhost:8080/v1/healthz
 
 ### /err
 GET http://localhost:8080/v1/err
+
+### /users
+POST http://localhost:8080/v1/users
+Content-Type: application/json
+
+{
+  "name": "Joe"
+}
+
+### /users
+GET http://localhost:8080/v1/users
+Authorization: ApiKey 29b08ed5a62657588a239383cde8b70ea919d24d237669959f427cf673dc70b4
+
+### /users
+GET http://localhost:8080/v1/users
+Authorization: ApiKey unknown
+
+### /feeds
+POST http://localhost:8080/v1/feeds
+Authorization: ApiKey 29b08ed5a62657588a239383cde8b70ea919d24d237669959f427cf673dc70b4
+Content-Type: application/json
+
+{
+  "name": "Lane's Blog",
+  "url": "https://wagslane.dev/index.xml"
+}
+
+### /feeds
+POST http://localhost:8080/v1/feeds
+Authorization: ApiKey 29b08ed5a62657588a239383cde8b70ea919d24d237669959f427cf673dc70b4
+Content-Type: application/json
+
+{
+  "name": "Garbage Blog",
+  "url": "https://garbageurl/index.xml"
+}
+
+### /feeds
+GET http://localhost:8080/v1/feeds
+
