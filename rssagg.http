@@ -13,6 +13,14 @@ Content-Type: application/json
 }
 
 ### /users
+POST http://localhost:8080/v1/users
+Content-Type: application/json
+
+{
+  "name": "Julie"
+}
+
+### /users
 GET http://localhost:8080/v1/users
 Authorization: ApiKey 29b08ed5a62657588a239383cde8b70ea919d24d237669959f427cf673dc70b4
 
@@ -43,3 +51,11 @@ Content-Type: application/json
 ### /feeds
 GET http://localhost:8080/v1/feeds
 
+### /feed_follows
+POST http://localhost:8080/v1/feed_follows
+Authorization: ApiKey 0f7499afc1939fa8a1e1e05f5d4363044f60a7a564e263a5dbdab8dff1d2459a
+Content-Type: application/json
+
+{
+  "feed_id": "83606aaf-bee4-41c8-8f22-954f958eef85"
+}
